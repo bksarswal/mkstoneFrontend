@@ -1,0 +1,18 @@
+
+
+
+function Home(){
+
+
+
+    return (
+
+        <>
+        
+    <h1>  home section</h1>
+        </>
+    )
+}
+
+
+export default Home;
