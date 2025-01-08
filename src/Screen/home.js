@@ -47,7 +47,8 @@ Getprodect();
         p_data.map((d,i)=>(
             <div key={i} class="max-w-sm  bg-white rounded-lg shadow-lg overflow-hidden">
  
-  <img src={d.image} alt="Product Image" class="w-full h-48 object-cover"/>
+       <div className=' items-center '  > <img src={d.image} alt="Product   Image" class="w-full m-4 h-56 "/></div>
+    
 
 
   <div class="p-4">
@@ -58,10 +59,10 @@ Getprodect();
     <p class="text-gray-600 text-sm">Category: <span class="font-medium text-gray-700">{d.catagary}</span></p>
 
   
-    <div class="flex items-center mt-2">
-        <p class="text-lg font-bold text-green-600 mr-2">{(d.price)}</p>
-      <span class="text-sm text-gray-500 line-through">{(d.price)*0.15}</span>
-      <span class="ml-2 text-xs bg-red-500 text-white px-2 py-1 rounded-full">{d.discount}</span>
+    <div class="flex flex-col items-start mt-2">
+      <span class="text-sm text-gray-500 line-through">&#8377; {(d.price)}</span>
+        <p class="text-lg font-bold text-green-600 mr-2">Price &#8377; {(d.price)-(d.price*(d.discount/100)).toFixed(2)}</p>
+      <span class="ml-2 text-xs bg-red-500 text-white px-2 py-1 rounded-full">{d.discount} %OFF</span>
     </div>
 
     <p class="mt-3 text-gray-700 text-sm">

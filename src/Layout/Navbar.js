@@ -28,7 +28,7 @@ function Navbar() {
   const Name = [
     { name: 'Home', link: '/home' },
     { name: 'About', link: '#' },
-    { name: 'Contact', link: '#' },
+    { name: 'Contact', link: '/Contact' },
     {
       name: isLoggedIn ? 'Logout' : 'Login',
       action: handleLogout, // Attach logout/login handler here

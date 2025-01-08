@@ -5,6 +5,8 @@ import AuthRouter from "./authRouter";
 import AdminRouter from "./AdminRouter";
 import Navbar from "../Layout/Navbar";
 import AdminNavbar from "../Layout/AdminNavbar";
+import Footer from "../Layout/footer";
+import Whatsapp from "../Screen/watsapp";
 
 function CombineRouter() {
   // Extract the `auth` status
@@ -32,6 +34,8 @@ console.log(Role);
 
           <Navbar/>
           <AllRouter/>
+          <Whatsapp/>
+          <Footer/>
 
           </>
           
