@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import clsx from 'clsx';
+
 import { useDispatch } from 'react-redux'; // For dispatching actions (if using Redux)
 import { IoMdMenu } from 'react-icons/io';
-import logo from '../Images/image.png';
+import logo from '../Images/sosn/Screenshot (6).png';
 import '../Style/index.css';
 
 function Navbar() {
@@ -27,8 +28,9 @@ function Navbar() {
 
   const Name = [
     { name: 'Home', link: '/home' },
-    { name: 'About', link: '#' },
+    { name: 'About', link: '/About' },
     { name: 'Contact', link: '/Contact' },
+    
     {
       name: isLoggedIn ? 'Logout' : 'Login',
       action: handleLogout, // Attach logout/login handler here
@@ -40,7 +42,7 @@ function Navbar() {
       <nav className="p-3 flex bg-white justify-between items-center">
         <a href="#" id="brand" className="flex gap-2 items-center">
           <img className="object-cover max-w-12 max-h-8 ml-4" src={logo} alt="bk" />
-          <span className="text-lg font-medium">YourBrand</span>
+          <span className="text-lg font-medium">Saini Online Stone industri</span>
         </a>
 
         {/* Desktop Menu */}

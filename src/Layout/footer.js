@@ -7,13 +7,17 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <div className="bg-gray-900 text-white py-8">
+      <div className="bg-gray-900 mb-0 text-white py-8">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
           {/* Informations Section */}
           <div className="">
             <h3 className="text-xl font-semibold mb-4">Informations</h3>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Malia Construction is a distinguished civil services company with 25 years of experience in residential homes, retail stores, office buildings, restaurants, schools, and hospitals. While every effort is made to ensure accuracy, project details may be subject to change. Consult directly for the most current and precise information.
+            Saini Online Stone industries  is one of the leading manufacturers of Sandstone Fountain, Sandstone Statue, Sandstone Jali etc.
+            We are specialists in grit wash with over 20+ years of experience
+            in the field. Our motto is your satisfaction and quality.  
+            We provide our services pan India.
+            
             </p>
           </div>
 
@@ -31,7 +35,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 {/* <EmailIcon className="mr-2 text-primary" /> */}
-                <Link to="mailto:maliaconstructioninfo@gmail.com" className="hover:text-primary">
+                <Link to="mailto:bholusaini686@gmail.com" className="hover:text-primary">
                   bholusaini2112@gmail.com
                 </Link>
               </li>

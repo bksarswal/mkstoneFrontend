@@ -7,21 +7,42 @@ import imgilu from "../Images/image.png";
 import { toast } from "react-toastify";
 import { Base_URL } from "../config/config";
 import axios from "axios";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+
 
 
 function VerifyOtp() {
 
   const dispatch = useDispatch()
   const navigate= useNavigate();
+  const Location = useLocation();
+
+  useEffect(() => {
+    if (!Location.state?.email) {
+      toast.error("No email found. Redirecting to login.");
+      navigate("/login"); // Redirect to login if email is not present
+    }
+  }, [Location, navigate]);
+  
   const [values ,setValues] = useState({
-    email:"",
+    email: Location.state?.email||"",
+  
     otp :"",
-    password:""
+    n_pass:""
    
 
   });
+
+ 
+  useEffect(() => {
+    if (!Location.state?.email) {
+      toast.error("No email found. Redirecting to login.");
+      navigate("/login");
+    }
+  }, [Location, navigate]);
+
 
 const handleInput = (e) => {
 
@@ -34,12 +55,14 @@ const handleInput = (e) => {
 
   const handeVerifyOtp = () => {
     
+
+    
     axios.post(Base_URL + '/verify-otp', values)
     .then((res) => {
       console.log(res.data.data);
       toast.success(res.data.message);
      
-      // navigate('/Ragister');
+      navigate('/login');
     
     })
     .catch((err) => {
@@ -54,9 +77,6 @@ const handleInput = (e) => {
 
   const handleResetPass = () => {
     
- 
-     
-     
       navigate('/Resetpass');
     
    
@@ -66,28 +86,17 @@ const handleInput = (e) => {
       <div className="form-container hidden lg:flex rounded-xl shadow-xl border w-11/12 max-w-screen-xl">
         <div className="form-section w-1/2 px-24 py-12 text-center">
           <h1 className="text-3xl font-semibold mt-6 opacity-80 text-neutral-900">
-            Reset Your Password
+            VerifyOtp
           </h1>
           <p className="text-black opacity-60 mt-3">
-            Welcome back! Select a method to restpass in:
+            veryfyotp  to restpass in:
           </p>
 
           <div className="mt-6">
-            <label htmlFor="email" className="block text-left mb-2">
-              Email
-            </label>
-            <input
-              id="email"
-              name="email"
-              className="mb-4 border rounded-lg w-full px-4 py-2"
-              type="email"
-              onChange={handleInput}
-              placeholder="Enter your email"
-            />
-             
+           
 
-            <label htmlFor="email" className="block text-left mb-2">
-              Otp
+            <label htmlFor="otp" className="block text-left mb-2">
+             Enter OTP
             </label>
             <input
               id="otp"
@@ -98,15 +107,15 @@ const handleInput = (e) => {
               placeholder="Enyter otp"
             />
             <label htmlFor="password" className="block text-left mb-2">
-              password
+              Enter New Password
             </label>
             <input
               id="password"
               name="password"
               className="mb-4 border rounded-lg w-full px-4 py-2"
-              type="string"
+              type="text"
               onChange={handleInput}
-              placeholder="Enyter n pass"
+              placeholder="Enter n pass"
             />
             
            
@@ -121,7 +130,7 @@ const handleInput = (e) => {
               className="mt-4 border rounded-lg bg-red-500 text-white w-full py-2"
               onClick={handleResetPass}
             >
-              otpsend again
+              OTP Send Again
             </button>
           </div>
         </div>
@@ -144,20 +153,9 @@ const handleInput = (e) => {
           <p className="opacity-60 mt-3">Welcome back! Select a method to log in:</p>
 
           <div className="mt-6">
-            <label htmlFor="mobile-email" className="block text-left mb-2">
-              Email
-            </label>
-            <input
-              id="mobile-email"
-              className="mb-4 border rounded-lg w-full px-4 py-2"
-              type="email"
-              name="email"
-              
-              onChange={handleInput}
-              placeholder="Enter your email"
-            />
+            
 
-<label htmlFor="email" className="block text-left mb-2">
+          < label htmlFor="otp" className="block text-left mb-2">
               Otp
             </label>
             <input

@@ -7,6 +7,7 @@ import {  useNavigate } from "react-router";
 import Whatsapp from "../Screen/watsapp";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import owner from "../Images/sosn/owner.jpg"
 
 const ContactUs = () => {
   useEffect(() => {
@@ -173,9 +174,9 @@ navigate('/Login')
         </div>
 
         <div className="illustration-section w-1/2 bg-transparent text-center p-12">
-          <img src={imgilu} alt="Illustration" className="mx-auto mb-6" />
-          <h1 className="text-2xl font-bold mb-2">Connect Any Application</h1>
-          <p className="mb-8">Hi everyone</p>
+          <img src={owner} alt="Illustration" className="mx-auto mb-6" />
+          <h1 className="text-2xl font-bold mb-2">Connect Any query</h1>
+          <p className="mb-8"> <strong>MANISH SAINI (Owner)</strong></p>
           <div className="dots flex justify-center items-center gap-x-3">
             <div className="dot w-2 h-2 bg-white rounded-full"></div>
             <div className="dot w-2 h-2 bg-white rounded-full"></div>
@@ -257,7 +258,7 @@ navigate('/Login')
   <div className="container min-w-full h-[450px] flex items-center mt-8 mb-5" data-aos="zoom-in">
     <iframe
       className="rounded-sm w-full h-full border-0"
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14013.683012971273!2d77.0907995!3d28.5871518!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1b2ffc8073bd%3A0xba7a50742c28f30c!2sMalia%20Contactor!5e0!3m2!1sen!2sin!4v1678274856836!5m2!1sen!2sin"
+      src="https://www.google.com/maps/embed?pb=!3m2!1sen!2sin!4v1736364192895!5m2!1sen!2sin!6m8!1m7!1sLf0Y26GmpOHkhAxTerDAPw!2m2!1d26.94919930478351!2d76.59293553204864!3f328.85712!4f0!5f0.7820865974627469" 
       allowFullScreen=""
       loading="lazy"
       referrerPolicy="no-referrer-when-downgrade"
@@ -265,6 +266,7 @@ navigate('/Login')
     ></iframe>
   </div>
 
+ 
   {/* WhatsApp Section */}
   <Whatsapp />
 </div>

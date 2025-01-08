@@ -11,7 +11,7 @@ import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 
 
-function ForgotPassword() {
+function ForgotPassword(e) {
 
   const dispatch = useDispatch()
   const navigate= useNavigate();
@@ -34,7 +34,7 @@ const handleInput = (e) => {
       console.log(res.data.data);
       toast.success(res.data.message);
      
-      navigate('/Verifyotp');
+      navigate(('/Verifyotp'), {state:{email:values.email}});
     
     })
     .catch((err) => {
@@ -57,7 +57,7 @@ const handleInput = (e) => {
             Reset Your Password
           </h1>
           <p className="text-black opacity-60 mt-3">
-            Welcome back! Select a method to restpass in:
+            Welcome back! Send otp for rest pass :
           </p>
 
           <div className="mt-6">

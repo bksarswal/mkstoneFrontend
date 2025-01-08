@@ -46,6 +46,7 @@ console.log(Role);
         <>
           <Navbar />
           <AuthRouter />
+          <Footer/>
         </>
       )}
     </>
