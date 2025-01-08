@@ -2,4 +2,4 @@
 
 
 
-export const Base_URL= "http://localhost:8879/";
+export const Base_URL= "http://localhost:8879/user";

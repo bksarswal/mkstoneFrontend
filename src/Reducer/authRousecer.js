@@ -1,8 +1,6 @@
-import { data } from "react-router";
 
 
-
-const authReducer = (state, action)=>{
+const AuthRoudecre = (state, action)=>{
 
 
     if(  typeof state == 'undefined'){
@@ -41,6 +39,6 @@ const authReducer = (state, action)=>{
 
     }};
 
-export default authReducer;
+export default AuthRoudecre;
     
 

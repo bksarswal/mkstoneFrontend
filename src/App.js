@@ -1,6 +1,6 @@
 
 
-import CombineROuter from "./Router/CombineRoter";
+import CombineRouter from "./Router/CombineRoter";
 import Store from "./Store/Store";
 
 import {Provider} from "react-redux"
@@ -21,7 +21,7 @@ function App(){
    
    <Provider   store={Store}>
     
-   <CombineROuter/>
+   <CombineRouter/>
    </Provider>
    
     </>

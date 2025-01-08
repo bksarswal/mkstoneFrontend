@@ -1,37 +1,51 @@
-
-
-
-
-import { useState } from "react";
-import AllRouter from "./Allrouter";
-import AuthRouter from "./authRouter"
-import Navbar from "../Layout/Navbar";
+import React from "react";
 import { useSelector } from "react-redux";
- function CombineROuter(){
+import AllRouter from "./Allrouter";
+import AuthRouter from "./authRouter";
+import AdminRouter from "./AdminRouter";
+import Navbar from "../Layout/Navbar";
+import AdminNavbar from "../Layout/AdminNavbar";
 
-//  const [auth ,setAuth]= useState(false);
- const auth= useSelector((state)=>state.authReducer && state.authReducer.data &&state.authReducer.data._id !=null && state.authReducer.data._id !="undefind" ? true :false)
-    return(
+function CombineRouter() {
+  // Extract the `auth` status
 
-       <>
-         
+  const state = useSelector((state) => state.authReducer.data.role);
+console.log("Complete Redux State:", state);
+const auth= useSelector((state)=>state.authReducer && state.authReducer.data &&state.authReducer.data._id !=null && state.authReducer.data._id !=="undefind" ? true :false);
+ const Role= useSelector((state)=>state.authReducer && state.authReducer.data &&  state.authReducer.data.role && typeof state.authReducer.data.role == "string" && state.authReducer.data.role !== "undefind" ? state.authReducer.data.role : "");
+console.log(Role);
 
-          {auth==true ? <>
-           <Navbar/>
-            <AllRouter/> </>
-            :
-             
-            <> 
-         
-            <AuthRouter/>
-            </>
-            }
+  return (
+    <>
+      {auth ? (
+        <>
         
-        
-       
-       </>
-    )
+          {Role === "admin" ? 
+          <> 
+        <AdminNavbar />
+        <AdminRouter />
+         </>
+          
+          :
+          
+          <>
 
- }
+          <Navbar/>
+          <AllRouter/>
 
- export default CombineROuter;
+          </>
+          
+   
+           }
+        </>
+      ) : (
+        <>
+          <Navbar />
+          <AuthRouter />
+        </>
+      )}
+    </>
+  );
+}
+
+export default CombineRouter;

@@ -5,7 +5,7 @@ import { IoMdMenu } from 'react-icons/io';
 import logo from '../Images/image.png';
 import '../Style/index.css';
 
-function Navbar() {
+function AdminNavbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(true); // Track login status
   const [isActive, setIsActive] = useState(false);
   const dispatch = useDispatch(); // Initialize Redux dispatch (optional)
@@ -26,9 +26,8 @@ function Navbar() {
   };
 
   const Name = [
-    { name: 'Home', link: '/home' },
-    { name: 'About', link: '#' },
-    { name: 'Contact', link: '#' },
+    { name: 'Home', link: '/Adminhome' },
+    { name: 'AdeProdects', link: '/prodects' },
     {
       name: isLoggedIn ? 'Logout' : 'Login',
       action: handleLogout, // Attach logout/login handler here
@@ -37,7 +36,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="p-3 flex bg-white justify-between items-center">
+      <nav className="p-3 flex bg-gray-500 justify-between items-center">
         <a href="#" id="brand" className="flex gap-2 items-center">
           <img className="object-cover max-w-12 max-h-8 ml-4" src={logo} alt="bk" />
           <span className="text-lg font-medium">YourBrand</span>
@@ -128,4 +127,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default AdminNavbar;
