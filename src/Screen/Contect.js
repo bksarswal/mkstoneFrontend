@@ -8,6 +8,7 @@ import Whatsapp from "../Screen/watsapp";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import owner from "../Images/sosn/owner.jpg"
+import Contentback from "../Images/sosn/contact.jpg"
 
 const ContactUs = () => {
   useEffect(() => {
@@ -64,18 +65,26 @@ navigate('/Login')
   {/* Contact Banner Section */}
   <div className="relative bg-gray-100 mb-8">
     {/* Background Image */}
-    <div className="contact-banner-img bg-cover bg-center h-64"></div>
+    <div className="contact-banner-img bg-cover bg-center h-64"
+     style={{ backgroundImage: `url(${Contentback})` }}
+    ></div>
     {/* Banner Content */}
     <div className="absolute inset-0 flex flex-col justify-center items-center text-center bg-black/50 text-white">
       <h2 className="text-2xl md:text-3xl font-semibold">
-        Dreams are meant to come true. <br /> We’ll make it happen for you.
+      Saini Online Stone industries 
       </h2>
       <div className="mt-4">
+       
         <a
-          href="#contact"
+          target="_blank"
+          without="true"
+          rel="noreferrer"
+          href="https://wa.me/+919119142594/?text=Hi, I would like to use your service!! Please give me more information. About .....   'please write your needs'"
+          aria-label="Whatsapp"
           className="inline-block px-6 py-3 text-white bg-red-600 hover:bg-red-700 rounded-lg shadow-md"
         >
-          Contact us
+          Connect
+         
         </a>
       </div>
     </div>
@@ -84,17 +93,20 @@ navigate('/Login')
   {/* About Section */}
   <div className="w-full py-6">
     <h1 className="text-2xl md:text-3xl font-bold text-blue-600 text-center">
-      Contact Malia Construction: Building Your Vision with 25 Years of Expertise
+      Contact Saini Online Stone industries 
     </h1>
-    <p className="mt-4 text-gray-700 leading-relaxed text-center">
-      Ready to embark on your construction journey? Contact Malia Construction,
-      a premier civil services company with an extensive 25-year legacy. Whether
-      it's crafting dream homes, innovative retail spaces, efficient office buildings,
-      inviting restaurants, inspiring schools, or state-of-the-art hospitals, our experienced
-      team is dedicated to turning your vision into reality. Reach out to us for a consultation
-      and discover how our expertise and commitment to excellence can elevate your construction
-      project. Your dreams deserve the precision and innovation that Malia Construction brings to
-      every endeavor. Contact us today, and let's build something extraordinary together.
+    <p className="mt-4 text-gray-700   font-bold  leading-relaxed text-center">
+    Hello my self Manish Saini. I am from Sinkandra , Rajasthan 
+I am a stone artist our factory in Sinkandra,Dausa, Rajasthan 
+Our factory is equipped with high technology machine.
+We also do manufacturing and fitting work
+​We can make any design in 3D, we can also make the design of any temple.Karauloi, Dholpur & Banshi
+ Pahadpure Stone Stone Zali, Zharokhe, Ghamle, Lion,. Elephant Ghoda, Batakh, Machli, More, Chhatri, Murti Kundi, Khambe, Pillar, Gate Lamp etc.  
+
+You can take the service here according to you
+Pro. Manish  Saini (owner)                                                        M. 91191142594
+                                                    
+Saini Online Stone industries in Sinkandra
     </p>
   </div>
 

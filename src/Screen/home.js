@@ -5,6 +5,7 @@ import { useEffect } from 'react';
  import axios from 'axios';
 import { toast } from 'react-toastify';
 import { Base_URL } from '../config/config';
+import Contectback from "../Images/sosn/contact.jpg"
 import { data } from 'react-router';
 function Home(){
 
@@ -13,11 +14,11 @@ function Home(){
   function Getprodect(){
 
 axios.get(Base_URL + '/getprotects' , p_data).then((res)=>{
-    console.log(res.data.data);
+    // console.log(res.data.data);
     setPData(res.data.data);
     if(res.data.message){
         toast.warn(res.data.message)
-        console.log(res.data.message);
+        // console.log(res.data.message);
     }
    
     
@@ -40,14 +41,26 @@ Getprodect();
     return (
 
         <>
-   
-    <div  class="flex flex-wrap justify-center gap-6 p-6 bg-gray-100">
+            <div className="relative">
+     <div
+       className="h-72 bg-cover bg-center bg-gray-300 rounded-xl mx-6"
+       style={{ backgroundImage: `url(${Contectback})` }}
+     ></div>
+     <div className="absolute inset-0 flex items-center justify-center text-green-300 bg-black bg-opacity-50 text-center rounded-xl mx-6">
+       <p className="text-xxxl md:text-2xl font-semibold px-4">
+         Oure Products
+       </p>
+     </div>
+   </div>
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 bg-gray-100">
+ 
+      
      {
         Array.isArray(p_data) && p_data.length >0 ?
         p_data.map((d,i)=>(
             <div key={i} class="max-w-sm  bg-white rounded-lg shadow-lg overflow-hidden">
  
-       <div className=' items-center '  > <img src={d.image} alt="Product   Image" class="w-full m-4 h-56 "/></div>
+       <div className=' items-center '  > <img src={d.image} alt="Product   Image" class="w-full  h-56 "/></div>
     
 
 

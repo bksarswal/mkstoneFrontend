@@ -30,7 +30,7 @@ const handleInput = (e) => {
     
     axios.post(Base_URL + '/login', values)
     .then((res) => {
-      console.log(res.data.data);
+      // console.log(res.data.data);
       toast.success(res.data.message);
      
       // navigate('/Ragister');

@@ -31,7 +31,7 @@ const handleInput = (e) => {
     
     axios.post(Base_URL + '/reset', values)
     .then((res) => {
-      console.log(res.data.data);
+      // console.log(res.data.data);
       toast.success(res.data.message);
      
       navigate(('/Verifyotp'), {state:{email:values.email}});

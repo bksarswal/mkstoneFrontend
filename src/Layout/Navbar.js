@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 import { useDispatch } from 'react-redux'; // For dispatching actions (if using Redux)
 import { IoMdMenu } from 'react-icons/io';
-import logo from '../Images/sosn/Screenshot (6).png';
+import logo from '../Images/sosn/lg.webp';
 import '../Style/index.css';
 
 function Navbar() {
@@ -41,8 +41,8 @@ function Navbar() {
     <>
       <nav className="p-3 flex bg-white justify-between items-center">
         <a href="#" id="brand" className="flex gap-2 items-center">
-          <img className="object-cover max-w-12 max-h-8 ml-4" src={logo} alt="bk" />
-          <span className="text-lg font-medium">Saini Online Stone industri</span>
+          <img className="object-cover max-w-20 max-h-16 ml-4" src={logo} alt="logo" />
+          <span className="text-lg font-medium">Saini Online Stone industries</span>
         </a>
 
         {/* Desktop Menu */}
@@ -89,7 +89,7 @@ function Navbar() {
           <div id="navbar" className="flex justify-between p-4">
             <a href="#" id="brand" className="flex gap-2 items-center">
               <img className="object-cover max-w-12 max-h-8 ml-4" src={logo} alt="bk" />
-              <span className="text-lg font-medium">YourBrand</span>
+              <span className="text-xxg font-medium">Saini Online Stone industries</span>
             </a>
             <button type="button" className="p-2" onClick={handleMenu}>
               <i className="fa-solid fa-xmark text-gray-800"></i>
