@@ -28,7 +28,7 @@ const handleInput = (e) => {
 };
   const handleLogin = () => {
     
-    axios.post(Base_URL + '/login', values)
+    axios.post(Base_URL + '/user/login', values)
     .then((res) => {
       // console.log(res.data.data);
       toast.success(res.data.message);

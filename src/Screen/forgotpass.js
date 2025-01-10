@@ -29,7 +29,7 @@ const handleInput = (e) => {
 
   const handleResetPass = () => {
     
-    axios.post(Base_URL + '/reset', values)
+    axios.post(Base_URL + '/user/reset', values)
     .then((res) => {
       // console.log(res.data.data);
       toast.success(res.data.message);

@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import clsx from 'clsx';
+
 import { useDispatch } from 'react-redux'; // For dispatching actions (if using Redux)
 import { IoMdMenu } from 'react-icons/io';
-import logo from '../Images/image.png';
-import '../Style/index.css';
+import logo from '../Images/sosn/lg.webp';
+import insta from "../Images/sosn/insta2.png"
+import fb from "../Images/sosn/fb.jpg";
+import youtub from "../Images/sosn/youtub.png"
+import Adminhome from '../Screen/AdminPages/AdminHome';
+import { Link } from 'react-router';
+import "../Style/index.css"
 
 function AdminNavbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(true); // Track login status
@@ -26,8 +32,10 @@ function AdminNavbar() {
   };
 
   const Name = [
-    { name: 'Home', link: '/Adminhome' },
-    { name: 'AdeProdects', link: '/prodects' },
+    { name: 'Adminhome', link: '/Adminhome' },
+    { name: 'Adprodect', link: '/Adprodect' },
+    
+    
     {
       name: isLoggedIn ? 'Logout' : 'Login',
       action: handleLogout, // Attach logout/login handler here
@@ -36,10 +44,10 @@ function AdminNavbar() {
 
   return (
     <>
-      <nav className="p-3 flex bg-gray-500 justify-between items-center">
+      <nav className="fixed top-0 w-full z-10 p-2 flex bg-white justify-between items-center shadow-md">
         <a href="#" id="brand" className="flex gap-2 items-center">
-          <img className="object-cover max-w-12 max-h-8 ml-4" src={logo} alt="bk" />
-          <span className="text-lg font-medium">YourBrand</span>
+          <img className="object-cover max-w-20 max-h-16 ml-4" src={logo} alt="logo" />
+          <span className="text-lg font-medium">Saini Online Stone industries</span>
         </a>
 
         {/* Desktop Menu */}
@@ -66,9 +74,14 @@ function AdminNavbar() {
         </div>
 
         <button className="hidden lg:flex items-center border-2 px-2 py-2 gap-2 rounded-md border-black">
-          <img src={logo} className="max-w-6 max-h-6" alt="mode" />
-          <span>Back </span>
-        </button>
+       
+          <Link className=' hover:bg-gray-500 p-2'to="https://www.instagram.com/ms954923?igsh=dHd5ZzdncXFrNXNu"> <img src={insta} className="max-w-6 max-h-6" alt="instagram" /></Link>
+          <Link to="#" className=' hover:bg-gray-500 p-2'><img src={youtub} className="max-w-6 max-h-6" alt="youtub" /></Link>
+           <Link to="#" className=' hover:bg-gray-500 p-2 '><img src={fb} className="max-w-6 max-h-6" alt="facebook" /></Link>
+
+      <Link to={Adminhome} className=' hover:bg-gray-500 p-2 '> </Link>
+          </button>
+       
 
         {/* Mobile Menu Button */}
         <button type="button" className="p-2 lg:hidden" onClick={handleMenu}>
@@ -86,7 +99,7 @@ function AdminNavbar() {
           <div id="navbar" className="flex justify-between p-4">
             <a href="#" id="brand" className="flex gap-2 items-center">
               <img className="object-cover max-w-12 max-h-8 ml-4" src={logo} alt="bk" />
-              <span className="text-lg font-medium">YourBrand</span>
+              <span className="text-xxg font-medium">Saini Online Stone industries</span>
             </a>
             <button type="button" className="p-2" onClick={handleMenu}>
               <i className="fa-solid fa-xmark text-gray-800"></i>
@@ -115,11 +128,13 @@ function AdminNavbar() {
             )}
           </div>
 
-          <div className="h-[1px] bg-red-300"></div>
-          <button className="mt-6 w-full flex items-center hover:bg-gray-500 px-4 py-2 gap-2">
-            <img src={logo} className="max-w-6 max-h-6" alt="mode" />
-            <span>Back </span>
-           ::
+          <div className="h-[1px] "></div>
+          <button className="mt-6 w-full flex items-center  px-8 py-6 gap-2">
+          <Link className=' hover:bg-gray-500 p-2'to="https://www.instagram.com/ms954923?igsh=dHd5ZzdncXFrNXNu"> <img src={insta} className="max-w-6 max-h-6" alt="instagram" /></Link>
+          <Link to="#" className=' hover:bg-gray-500 p-2'><img src={youtub} className="max-w-6 max-h-6" alt="youtub" /></Link>
+           <Link to="#" className=' hover:bg-gray-500 p-2 '><img src={fb} className="max-w-6 max-h-6" alt="facebook" /></Link>
+
+      <Link to={Adminhome} className=' hover:bg-gray-500 p-2 '>  back</Link>
           </button>
         </div>
       </nav>

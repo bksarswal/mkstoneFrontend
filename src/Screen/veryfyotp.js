@@ -57,7 +57,7 @@ const handleInput = (e) => {
     
 
     
-    axios.post(Base_URL + '/verify-otp', values)
+    axios.post(Base_URL + '/user/verify-otp', values)
     .then((res) => {
       // console.log(res.data.data);
       toast.success(res.data.message);

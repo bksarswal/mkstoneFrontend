@@ -30,7 +30,7 @@ const handleRagister = () => {
     toast.error("Please fill in all fields.");
     return;
   }
-  axios.post(Base_URL + '/ragister', values)
+  axios.post(Base_URL + '/user/ragister', values)
     .then((res) => {
       toast.success(res.data.message);
       navigate('/Login')
