@@ -186,8 +186,9 @@ Saini Online Stone industries in Sinkandra
 
         <div className="illustration-section w-1/2 bg-transparent text-center p-12">
           <img src={owner} alt="Illustration" className="mx-auto mb-6" />
-          <h1 className="text-2xl font-bold mb-2">Connect Any query</h1>
-          <p className="mb-8"> <strong>MANISH SAINI (Owner)</strong></p>
+          <h1 className="text-2xl font-bold mb-2">Hello Everyone! </h1>
+          <p className="mb-8"> <strong>
+          I’m Manish Saini, the  owner of Saini Online Stone Industries.</strong></p>
           <div className="dots flex justify-center items-center gap-x-3">
             <div className="dot w-2 h-2 bg-white rounded-full"></div>
             <div className="dot w-2 h-2 bg-white rounded-full"></div>

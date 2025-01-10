@@ -15,13 +15,15 @@ const Footer = () => {
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
           {/* Informations Section */}
           <div className="">
-            <h3 className="text-xl font-semibold mb-4">Informations</h3>
-            <p className="text-gray-400 text-sm leading-relaxed">
-            Saini Online Stone industries  is one of the leading manufacturers of Sandstone Fountain, Sandstone Statue, Sandstone Jali etc.
-            We are specialists in grit wash with over 20+ years of experience
-            in the field. Our motto is your satisfaction and quality.  
-            We provide our services pan India.
-            
+            <h3 className="text-xl font-semibold mb-4">AboutUs</h3>
+            <p className="text-gra text-sm leading-relaxed">
+            At Saini Online Stone Industries, we take pride in being one of the leading manufacturers
+             of Sandstone Fountains, Sandstone Statues, Sandstone Jalis, and more.
+With over 20 years of expertise in the field, we specialize in grit wash and provide
+ exceptional craftsmanship and quality. Our motto is simple: Your Satisfaction and Quality First.
+We are committed to serving clients across India, delivering premium sandstone products for
+ homes, temples, gardens, and custom projects.
+          
             </p>
           </div>
 

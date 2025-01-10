@@ -113,8 +113,13 @@ const handleInput = (e) => {
 
         <div className="illustration-section w-1/2 bg-transparent text-center p-12">
           <img src={imgilu} alt="Illustration" className="mx-auto mb-6" />
-          <h1 className="text-2xl font-bold mb-2">Connect Any Application</h1>
-          <p className="mb-8">Hi everyone</p>
+          <h1 className="text-2xl font-bold mb-2">Connect with saini Online Stone Industries</h1>
+          <p className="mb-8">Hello Everyone!
+I’m Manish Saini, the owner of Saini Online Stone Industries.
+If you’re looking for top-quality sandstone items for building projects, temples, gardens,
+ or any other custom needs, we’re here to help. With over 20 years of expertise, 
+ we ensure unmatched quality and satisfaction in every product.
+Feel free to connect with us for your requirements. We’d love to collaborate and bring your vision to life!</p>
           <div className="dots flex justify-center items-center gap-x-3">
             <div className="dot w-2 h-2 bg-white rounded-full"></div>
             <div className="dot w-2 h-2 bg-white rounded-full"></div>
