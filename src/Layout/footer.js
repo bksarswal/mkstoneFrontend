@@ -3,6 +3,10 @@ import React from "react";
 // import EmailIcon from "@mui/icons-material/Email";
 // import PlaceIcon from "@mui/icons-material/Place";
 import { Link } from "react-router-dom";
+import fb from "../Images/sosn/fb.jpg";
+import youtub from "../Images/sosn/youtub.png"
+import Home from '../Screen/home';
+import insta from '../Images/sosn/insta2.png'
 
 const Footer = () => {
   return (
@@ -27,16 +31,16 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-center">
                 {/* <LocalPhoneIcon className="mr-2 text-primary" /> */}
-                <Link to="tel:9119142594" className="hover:text-primary">+91 9119142594</Link>
+                <Link to="tel:9119142594" className="hover:text-primary">+91 9549230117</Link>
               </li>
               <li className="flex items-center">
                 {/* <LocalPhoneIcon className="mr-2 text-primary" /> */}
-                <Link to="tel:7073736054" className="hover:text-primary">+91 7073736054</Link>
+                <Link to="tel:7073736054" className="hover:text-primary">+91 7891283350</Link>
               </li>
               <li className="flex items-center">
                 {/* <EmailIcon className="mr-2 text-primary" /> */}
-                <Link to="mailto:bholusaini686@gmail.com" className="hover:text-primary">
-                  bholusaini2112@gmail.com
+                <Link to="mailto:mks907199@gmail.com" className="hover:text-primary">
+                Mks907199@gmail.com
                 </Link>
               </li>
               <li className="flex items-start">
@@ -65,20 +69,29 @@ const Footer = () => {
                 <Link to="/services" className="hover:text-primary">Services</Link>
               </li>
               <li>
-                <Link to="/gallery" className="hover:text-primary">Our Project Gallery</Link>
-              </li>
-              <li>
                 <Link to="/contact" className="hover:text-primary">Contact Us</Link>
               </li>
+              <li>
+                 <button className=" w-full flex items-center ">
+          <Link className=' hover:bg-gray-500 p-2'to="https://www.instagram.com/ms954923?igsh=dHd5ZzdncXFrNXNu"> <img src={insta} className="max-w-6 max-h-6" alt="instagram" /></Link>
+          <Link to="#" className=' hover:bg-gray-500 p-2'><img src={youtub} className="max-w-6 max-h-6" alt="youtub" /></Link>
+           <Link to="#" className=' hover:bg-gray-500 p-2 '><img src={fb} className="max-w-6 max-h-6" alt="facebook" /></Link>
+
+      <Link to={Home} className=' hover:bg-gray-500 p-2 '>  </Link>
+          </button>
+              </li>
+              
             </ul>
           </div>
         </div>
 
         {/* Footer End */}
         <div className="text-center border-t border-gray-700 mt-8 pt-4">
-          <p className="text-gray-500 text-sm">
-            Copyright © 2024. Bksarswal0799.
-          </p>
+          
+            <a className="text-gray-500  hover:bg-red-100  p-2 rounded-md text-md" href="https://bksarswal.netlify.app/">
+            Copyright © 2024. Bksarswal.
+            </a> 
+          
         </div>
       </div>
     </>

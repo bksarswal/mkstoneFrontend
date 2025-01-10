@@ -9,7 +9,7 @@ const Whatsapp = () => {
           target="_blank"
           without="true"
           rel="noreferrer"
-          href="https://wa.me/+919119142594/?text=Hi, I would like to use your service!! Please give me more information."
+          href="https://wa.me/+919549230117/?text=Hi, I would like to use your service!! Please give me more information."
           aria-label="Whatsapp"
           className="block w-16 h-16  rounded-full shadow-lg hover:bg-green-600 transition duration-300"
         >

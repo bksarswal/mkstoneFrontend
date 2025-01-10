@@ -4,7 +4,12 @@ import clsx from 'clsx';
 import { useDispatch } from 'react-redux'; // For dispatching actions (if using Redux)
 import { IoMdMenu } from 'react-icons/io';
 import logo from '../Images/sosn/lg.webp';
-import '../Style/index.css';
+
+import insta from "../Images/sosn/insta2.png"
+import fb from "../Images/sosn/fb.jpg";
+import youtub from "../Images/sosn/youtub.png"
+import { Link } from 'react-router';
+import Home from '../Screen/home';
 
 function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(true); // Track login status
@@ -69,9 +74,14 @@ function Navbar() {
         </div>
 
         <button className="hidden lg:flex items-center border-2 px-2 py-2 gap-2 rounded-md border-black">
-          <img src={logo} className="max-w-6 max-h-6" alt="mode" />
-          <span>ModeTitle</span>
-        </button>
+       
+          <Link className=' hover:bg-gray-500 p-2'to="https://www.instagram.com/ms954923?igsh=dHd5ZzdncXFrNXNu"> <img src={insta} className="max-w-6 max-h-6" alt="instagram" /></Link>
+          <Link to="#" className=' hover:bg-gray-500 p-2'><img src={youtub} className="max-w-6 max-h-6" alt="youtub" /></Link>
+           <Link to="#" className=' hover:bg-gray-500 p-2 '><img src={fb} className="max-w-6 max-h-6" alt="facebook" /></Link>
+
+      <Link to={Home} className=' hover:bg-gray-500 p-2 '> </Link>
+          </button>
+       
 
         {/* Mobile Menu Button */}
         <button type="button" className="p-2 lg:hidden" onClick={handleMenu}>
@@ -118,11 +128,13 @@ function Navbar() {
             )}
           </div>
 
-          <div className="h-[1px] bg-red-300"></div>
-          <button className="mt-6 w-full flex items-center hover:bg-gray-500 px-4 py-2 gap-2">
-            <img src={logo} className="max-w-6 max-h-6" alt="mode" />
-            <span>ModeTitle</span>
-            <IoMdMenu />
+          <div className="h-[1px] "></div>
+          <button className="mt-6 w-full flex items-center  px-8 py-6 gap-2">
+          <Link className=' hover:bg-gray-500 p-2'to="https://www.instagram.com/ms954923?igsh=dHd5ZzdncXFrNXNu"> <img src={insta} className="max-w-6 max-h-6" alt="instagram" /></Link>
+          <Link to="#" className=' hover:bg-gray-500 p-2'><img src={youtub} className="max-w-6 max-h-6" alt="youtub" /></Link>
+           <Link to="#" className=' hover:bg-gray-500 p-2 '><img src={fb} className="max-w-6 max-h-6" alt="facebook" /></Link>
+
+      <Link to={Home} className=' hover:bg-gray-500 p-2 '>  back</Link>
           </button>
         </div>
       </nav>

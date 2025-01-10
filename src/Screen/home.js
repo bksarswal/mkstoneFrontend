@@ -84,7 +84,16 @@ Getprodect();
 
     <div class="mt-4">
       <button class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
-        Add to Cart
+      <a
+          target="_blank"
+          without="true"
+          rel="noreferrer"
+          href="https://wa.me/+919549230117/?text=Hi, I would like to use your service!! Please give me more information.${}"
+          aria-label="Whatsapp"
+        
+        >
+         Contect With Owner
+        </a>
       </button>
     </div>
   </div>

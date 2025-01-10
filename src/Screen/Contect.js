@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import imgilu from "../Images/image.png";
+
 import axios from "axios";
 import { Base_URL } from "../config/config";
 import { toast } from "react-toastify";
@@ -78,7 +78,7 @@ navigate('/Login')
           target="_blank"
           without="true"
           rel="noreferrer"
-          href="https://wa.me/+919119142594/?text=Hi, I would like to use your service!! Please give me more information. About .....   'please write your needs'"
+          href="https://wa.me/+919549230117/?text=Hi, I would like to use your service!! Please give me more information. About .....   'please write your needs'"
           aria-label="Whatsapp"
           className="inline-block px-6 py-3 text-white bg-red-600 hover:bg-red-700 rounded-lg shadow-md"
         >
@@ -103,7 +103,7 @@ We also do manufacturing and fitting work
  Pahadpure Stone Stone Zali, Zharokhe, Ghamle, Lion,. Elephant Ghoda, Batakh, Machli, More, Chhatri, Murti Kundi, Khambe, Pillar, Gate Lamp etc.  
 
 You can take the service here according to you
-Pro. Manish  Saini (owner)                                                        M. 91191142594
+Pro. Manish  Saini (owner)                                                        M. 9549230117
                                                     
 Saini Online Stone industries in Sinkandra
     </p>

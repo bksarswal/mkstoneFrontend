@@ -67,7 +67,7 @@ function AdminNavbar() {
 
         <button className="hidden lg:flex items-center border-2 px-2 py-2 gap-2 rounded-md border-black">
           <img src={logo} className="max-w-6 max-h-6" alt="mode" />
-          <span>ModeTitle</span>
+          <span>Back </span>
         </button>
 
         {/* Mobile Menu Button */}
@@ -118,8 +118,8 @@ function AdminNavbar() {
           <div className="h-[1px] bg-red-300"></div>
           <button className="mt-6 w-full flex items-center hover:bg-gray-500 px-4 py-2 gap-2">
             <img src={logo} className="max-w-6 max-h-6" alt="mode" />
-            <span>ModeTitle</span>
-            <IoMdMenu />
+            <span>Back </span>
+           ::
           </button>
         </div>
       </nav>
