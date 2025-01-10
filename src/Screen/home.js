@@ -13,7 +13,7 @@ function Home(){
 
   function Getprodect(){
 
-axios.get(Base_URL + '/getprotects' , p_data).then((res)=>{
+axios.get(Base_URL + '/user/getprotects' , p_data).then((res)=>{
     // console.log(res.data.data);
     setPData(res.data.data);
     if(res.data.message){
