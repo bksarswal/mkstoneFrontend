@@ -1,6 +1,6 @@
 
 
 
-export const Base_URL= "http://localhost:https://ecombackend-bmrd.onrender.com/user";
+export const Base_URL= "https://ecombackend-bmrd.onrender.com/user";
 
 
