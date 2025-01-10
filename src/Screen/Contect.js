@@ -12,7 +12,7 @@ import Contentback from "../Images/sosn/contact.jpg"
 
 const ContactUs = () => {
   useEffect(() => {
-    document.title = "Malia Construction - Contact us for youe query";
+    document.title = "Contect with(Owner) - Contact us for youe query";
   }, []);
   useEffect(() => {
     AOS.init();
