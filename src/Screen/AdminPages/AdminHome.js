@@ -7,14 +7,14 @@ function AdminHome(){
 
     return (
 
-        <>
+        < div className='mt-24'> 
         
     <h1> 
          AdminHomee section
         
 
     </h1>
-        </>
+        </div>
     )
 }
 

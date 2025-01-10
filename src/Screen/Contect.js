@@ -59,8 +59,7 @@ navigate('/Login')
 }
 
   return (
-    <>
-      
+< div className='mt-24'>       
       <div className="container mx-auto px-4" >
   {/* Contact Banner Section */}
   <div className="relative bg-gray-100 mb-8">
@@ -284,7 +283,7 @@ Saini Online Stone industries in Sinkandra
 </div>
 
     
-    </>
+    </div>
   );
 };
 

@@ -81,7 +81,7 @@ const handleInput = (e) => {
     
    
   };
-  return (
+  return (< div className='mt-24 mb-10'> 
     <div className="flex justify-center items-center w-full h-full bg-slate-50">
       <div className="form-container hidden lg:flex rounded-xl shadow-xl border w-11/12 max-w-screen-xl">
         <div className="form-section w-1/2 px-24 py-12 text-center">
@@ -195,6 +195,7 @@ const handleInput = (e) => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

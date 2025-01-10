@@ -39,7 +39,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="p-3 flex bg-white justify-between items-center">
+      <nav className="fixed top-0 w-full z-10 p-2 flex bg-white justify-between items-center shadow-md">
         <a href="#" id="brand" className="flex gap-2 items-center">
           <img className="object-cover max-w-20 max-h-16 ml-4" src={logo} alt="logo" />
           <span className="text-lg font-medium">Saini Online Stone industries</span>

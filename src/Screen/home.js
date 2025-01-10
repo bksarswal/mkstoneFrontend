@@ -40,8 +40,8 @@ Getprodect();
 
     return (
 
-        <>
-            <div className="relative">
+        < div className='mt-24 min-h-screen  flex flex-col'> 
+            <div className="relative mt-10">
      <div
        className="h-72 bg-cover bg-center bg-gray-300 rounded-xl mx-6"
        style={{ backgroundImage: `url(${Contectback})` }}
@@ -49,7 +49,7 @@ Getprodect();
      <div className="absolute inset-0 flex items-center justify-center text-green-300 bg-black bg-opacity-50 text-center rounded-xl mx-6">
        <p className="text-xxxl md:text-2xl font-semibold px-4">
          Oure Products
-       </p>
+       </p> 
      </div>
    </div>
    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 bg-gray-100">
@@ -98,7 +98,8 @@ Getprodect();
      
     
 </div>
-        </>
+
+        </ div>
     )
 }
 

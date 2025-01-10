@@ -18,7 +18,8 @@ const AboutUs = () => {
   }, []);
 
   return (
-   <><div className="w-full">
+    < div className='mt-24'> 
+    <div className="w-full">
    {/* Hero Section */}
    <div className="relative">
      <div
@@ -95,7 +96,7 @@ const AboutUs = () => {
  </div>
  <Home/>
  <ContactUs/>
- </>
+ </div>
   );
 };
 
