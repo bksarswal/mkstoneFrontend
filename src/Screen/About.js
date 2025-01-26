@@ -8,6 +8,7 @@ import aboutback from "../Images/sosn/backabout.jpg"
 import owner from "../Images/sosn/owner.jpg"
 import ContactUs from "./Contect";
 import Home from "./home";
+
 const AboutUs = () => {
   useEffect(() => {
     AOS.init();

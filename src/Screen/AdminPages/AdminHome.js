@@ -63,10 +63,10 @@ const handleAddprodect = () => {
       <div className="form-container hidden lg:flex rounded-xl shadow-xl border w-11/12 max-w-screen-xl">
         <div className="form-section w-1/2 px-24 py-12 text-center">
           <h1 className="text-3xl font-semibold mt-6 opacity-80 text-neutral-900">
-            bsdk markt  ko chhan mar jo bdiya itme dike use add kr de 
+            ADD Prodects 
           </h1>
           <p className="text-black opacity-60 mt-3">
-          ha bdiya hh krde 
+           Enter Prodects Detaiols her snd CLick Submit
           </p>
 
           <div className="mt-6">
@@ -144,7 +144,7 @@ const handleAddprodect = () => {
               className="mt-4 border rounded-lg bg-red-500 text-white w-full py-2"
               onClick={handleAddprodect}
             >
-              kr d hit hhb dba d
+              Submit
             </button>
           
           </div>
@@ -152,7 +152,7 @@ const handleAddprodect = () => {
 
         <div className="illustration-section w-1/2 bg-transparent text-center p-12">
           <img src={imgilu} alt="Illustration" className="mx-auto mb-6" />
-          <h1 className="text-2xl font-bold mb-2">or bsdk kya hall h  sun tu mast mast itme add ism link vale section me jo itme i uska link dal dena okk   </h1>
+          <h1 className="text-2xl font-bold mb-2">Saini Online Store</h1>
           <p className="mb-8"></p>
 
           <div className="dots flex justify-center items-center gap-x-3">
@@ -243,7 +243,7 @@ const handleAddprodect = () => {
               className="mt-4 border rounded-lg bg-red-500 text-white w-full py-2"
               onClick={handleAddprodect}
             >
-              kr d hit hhb dba d
+              Submit
             </button>
           
           </div>

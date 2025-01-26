@@ -21,7 +21,7 @@ function AuthRouter(){
         
         <Routes>
             <Route path="/" element={<AboutUs/>}/>
-            <Route path="/home" element={<Home/>}/>
+            <Route path="/Home" element={<Home/>}/>
             <Route path="/Contact" element={<ContactUs/>}/>
             <Route path="/About" element={<AboutUs/>}/>
             <Route path="/Login" element={<Login/>}/>

@@ -9,9 +9,7 @@ import authReducer from "../Reducer/combineReducer"
 
 const persidendState =localStorage.getItem('reduxStore')? JSON.parse(localStorage.getItem('reduxStore')):{};
 
-const enhancer= compose(
-    applyMiddleware(thunk)
-);
+const enhancer= compose( applyMiddleware(thunk));
 
 const Store = createStore(
 
