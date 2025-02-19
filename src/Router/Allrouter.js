@@ -4,6 +4,7 @@ import Home from "../Screen/home";
 import ContactUs from "../Screen/Contect";
 import AboutUs from "../Screen/About";
 import Viewmore from "../Screen/Viewmor";
+import PageNotFound from "../Screen/Pagenotfound";
 
 function AllRouter(){
 
@@ -21,7 +22,7 @@ function AllRouter(){
             <Route path="/About" element={<AboutUs/>}/>
             <Route path="/viewmore/:id" element={<Viewmore/>}/>
            
-            <Route path="/*" element={<Home/>}/>
+            <Route path="/*" element={<PageNotFound/>}/>
 
         </Routes>
         

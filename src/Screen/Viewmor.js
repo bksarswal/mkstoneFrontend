@@ -28,9 +28,9 @@ function   Viewmore(){
 
   
     <div class="flex flex-col items-start mt-2">
-      <span class="text-sm text-gray-500 line-through">&#8377; {(state.price)}</span>
-        <p class="text-lg font-bold text-green-600 mr-2">Price &#8377; {(state.price)-(state.price*(state.discount/100)).toFixed(2)}</p>
-      <span class="ml-2 text-xs bg-red-500 text-white px-2 py-1 rounded-full">{state.discount} %OFF</span>
+        <p class="text-lg font-bold text-green-600 ">Price &#8377; {(state.price)-(state.price*(state.discount/100)).toFixed(2)}</p>
+      <span class="text-sm text-gray-500 line-through">M.R.P &#8377; {(state.price)}</span>
+      <span class="text-xs bg-red-500 text-white px-2 py-1 rounded-full">{state.discount} %OFF</span>
     </div>
 
     <p class="mt-3 text-gray-700 text-sm">

@@ -44,9 +44,9 @@ const auth= useSelector((state)=>state.authReducer && state.authReducer.data &&s
         </>
       ) : (
         <>
-          <Navbar />
+          {/* <Navbar /> */}
           <AuthRouter />
-          <Footer/>
+          {/* <Footer/> */}
         </>
       )}
     </>

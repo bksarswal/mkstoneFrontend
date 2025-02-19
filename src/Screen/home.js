@@ -66,7 +66,7 @@ image:"https://5.imimg.com/data5/ANDROID/Default/2022/1/NP/XD/FQ/108570888/produ
 
   function Getprodect(){
 
-axios.get(Base_URL + '/user/getprotects' , p_data).then((res)=>{
+axios.get(Base_URL + '/getprotects' , p_data).then((res)=>{
     // console.log(res.data.data);
     setPData(res.data.data);
     if(res.data.message){
@@ -86,26 +86,27 @@ axios.get(Base_URL + '/user/getprotects' , p_data).then((res)=>{
 
    const handelNavigate = (d)=>{
 
-    navigate(`/viewmore/${d._id}` ,  {state:d});
+    navigate(`/viewmore/` + d.id ,  {state:d});
    }
 
 const uid= useSelector((state)=>state.authReducer && state.authReducer.data &&state.authReducer.data._id !=null && state.authReducer.data._id !=="undefind" ?state.authReducer.data._id:"" );
- 
+//  console.log(uid)
 const handeleaddToCart=(pid)=>{
  let temp = {
 
   u_id: uid,
   p_data:pid
  }
-
- console.log(uid);
- console.log(pid);
+// console.log("uid==");
+//  console.log(uid);
+//  console.log("pidi");
+//  console.log(pid);
 axios.post(Base_URL + "/addtocart",temp).then((res1)=>{
-console.log(res1);
+// console.log(res1);
   toast.success(res1.data.message)
 
 }).catch((err)=>{
-console.log(err);
+
 
   toast.error(err.response.data.message)
 })
@@ -113,7 +114,7 @@ console.log(err);
  }
 
 
- const handelgetToCarts= ()=>{
+ const handelgetToCarts = ()=>{
 
  }
 
@@ -137,13 +138,14 @@ Getprodect();
        </p> 
      </div>
    </div> 
-  
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 bg-gray-100">
+
+
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 bg-gray-100">
  
   
  {
-    
-   (prodact.map((d,i)=>(
+    filtereProdect.length > 0 ?
+   (filtereProdect.map((d,i)=>(
     <div key={i} class="max-w-sm  bg-white rounded-lg shadow-lg overflow-hidden">
 
 <div className=' items-center '  > <img src={d.image} alt="Product   Image" class="w-full  h-56 "/></div>
@@ -159,9 +161,9 @@ Getprodect();
 
 
 <div class="flex flex-col items-start mt-2">
-<span class="text-sm text-gray-500 line-through">&#8377; {(d.price)}</span>
 <p class="text-lg font-bold text-green-600 mr-2">Price &#8377; {(d.price)-(d.price*(d.discount/100)).toFixed(2)}</p>
-<span class="ml-2 text-xs bg-red-500 text-white px-2 py-1 rounded-full">{d.discount} %OFF</span>
+<span class="text-sm text-gray-500 line-through"> M.R.P &#8377; {(d.price)}</span>
+<span class=" text-xs bg-red-500 text-white px-2 py-1 rounded-full">{d.discount} %OFF</span>
 </div>
 
 <p class="mt-3 text-gray-700 text-sm">
@@ -175,7 +177,65 @@ Viewmor
 </div>
 <div class="mt-4">
 <button 
-onClick={handeleaddToCart(d._id)}
+onClick={()=>handeleaddToCart(d._id)}
+class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
+Addn to Cart
+</button>
+</div>
+<div class="mt-4">
+
+</div>
+</div>
+</div>
+
+
+))):<></>
+ }
+
+
+ 
+
+</div>
+  
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 bg-gray-100">
+ 
+  
+ {
+    
+   (prodact.map((d,i)=>(
+
+    <div key={i} class="max-w-sm  bg-white rounded-lg shadow-lg overflow-hidden">
+
+<div className=' items-center '  > <img src={d.image} alt="Product   Image" class="w-full  h-56 "/></div>
+
+
+
+<div class="p-4">
+
+<h2 class="text-xl font-semibold text-gray-800">{d.name}</h2>
+
+
+<p class="text-gray-600 text-sm">Category: <span class="font-medium text-gray-700">{d.catagary}</span></p>
+
+
+<div class="flex flex-col items-start mt-2">
+<p class="text-lg font-bold text-green-600 mr-2">Price &#8377; {(d.price)-(d.price*(d.discount/100)).toFixed(2)}</p>
+<span class="text-sm text-gray-500 line-through">M.R.P &#8377; {(d.price)}</span>
+<span class=" text-xs bg-red-500 text-white px-2 py-1 rounded-full">{d.discount} %OFF</span>
+</div>
+
+<p class="mt-3 text-gray-700 text-sm">
+{d.description}
+</p>
+
+<div class="mt-4">
+<button  onClick={()=>{handelNavigate(d)}} class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
+Viewmor
+</button>
+</div>
+<div class="mt-4">
+<button 
+onClick={()=>{handeleaddToCart(d._id)}}
 class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
 Addn to Cart
 </button>
@@ -195,62 +255,7 @@ Addn to Cart
 
 
 
-   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 bg-gray-100">
  
-  
-     {
-        filtereProdect.length > 0 ?
-       (filtereProdect.map((d,i)=>(
-        <div key={i} class="max-w-sm  bg-white rounded-lg shadow-lg overflow-hidden">
-
-   <div className=' items-center '  > <img src={d.image} alt="Product   Image" class="w-full  h-56 "/></div>
-
-
-
-<div class="p-4">
-
-<h2 class="text-xl font-semibold text-gray-800">{d.name}</h2>
-
-
-<p class="text-gray-600 text-sm">Category: <span class="font-medium text-gray-700">{d.catagary}</span></p>
-
-
-<div class="flex flex-col items-start mt-2">
-  <span class="text-sm text-gray-500 line-through">&#8377; {(d.price)}</span>
-    <p class="text-lg font-bold text-green-600 mr-2">Price &#8377; {(d.price)-(d.price*(d.discount/100)).toFixed(2)}</p>
-  <span class="ml-2 text-xs bg-red-500 text-white px-2 py-1 rounded-full">{d.discount} %OFF</span>
-</div>
-
-<p class="mt-3 text-gray-700 text-sm">
- {d.description}
-</p>
-
-<div class="mt-4">
-  <button  onClick={()=>{handelNavigate(d)}} class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
-  Viewmor
-  </button>
-</div>
-<div class="mt-4">
-  <button 
-  onClick={handeleaddToCart(d._id)}
-  class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
-  Addn to Cart
-  </button>
-</div>
-<div class="mt-4">
-
-</div>
-</div>
-</div>
-
-
-    ))):<></>
-     }
-   
-    
-     
-    
-</div>
 
         </ div>
     )
