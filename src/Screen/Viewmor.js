@@ -39,7 +39,7 @@ function   Viewmore(){
 
     
     <div class="mt-4">
-      <button class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
+      <button  class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
     Add to cart
       </button>
     </div>

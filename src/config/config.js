@@ -1,7 +1,7 @@
 
 
 
-export const Base_URL = "https://ecombackend-bmrd.onrender.com";
+export const Base_URL = "https://ecombackend-bmrd.onrender.com" ;
 
 
 

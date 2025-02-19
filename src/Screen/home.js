@@ -1,13 +1,13 @@
 
- import  react from 'react';
+import  react from 'react';
+import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import { useEffect } from 'react';
  import axios from 'axios';
-import { toast } from 'react-toastify';
-import { Base_URL } from '../config/config';
-import Contectback from "../Images/sosn/contact.jpg"
+ import { toast } from 'react-toastify';
+ import { Base_URL } from '../config/config';
+ import Contectback from "../Images/sosn/contact.jpg"
 import { useNavigate } from 'react-router';
-import { useSelector } from 'react-redux';
 
 function Home(){
   
@@ -80,49 +80,65 @@ axios.get(Base_URL + '/getprotects' , p_data).then((res)=>{
     toast.error(err)
 })
 
-
-
  }
+
+ 
 
    const handelNavigate = (d)=>{
 
     navigate(`/viewmore/` + d.id ,  {state:d});
    }
 
-const uid= useSelector((state)=>state.authReducer && state.authReducer.data &&state.authReducer.data._id !=null && state.authReducer.data._id !=="undefind" ?state.authReducer.data._id:"" );
+
+
+   function Gettocart(){
+
+    axios.get(Base_URL + '/gettocart' ).then((res)=>{
+      
+        console.log(res);
+       
+                                                                                                                     
+    }).catch((err)=>{
+    
+        toast.error(err)
+    })
+    
+     }   
+
+const uid=useSelector((state)=>state.authReducer && state.authReducer.data &&state.authReducer.data._id !=null && state.authReducer.data._id !=="undefind" ? state.authReducer.data._id :"");
 //  console.log(uid)
-const handeleaddToCart=(pid)=>{
+
+
+const handeleaddToCart = (pid)=>{
  let temp = {
 
-  u_id: uid,
-  p_data:pid
+  u_id:uid,
+   P_id:pid
  }
-// console.log("uid==");
-//  console.log(uid);
-//  console.log("pidi");
+;
 //  console.log(pid);
+//  console.log(uid);
 axios.post(Base_URL + "/addtocart",temp).then((res1)=>{
 // console.log(res1);
   toast.success(res1.data.message)
 
 }).catch((err)=>{
 
-
+// console.log(err.response.data.message);
   toast.error(err.response.data.message)
 })
 
  }
 
 
- const handelgetToCarts = ()=>{
 
- }
 
+  
    useEffect(()=>{
 Getprodect();
 
    },[])
-
+ 
 
     return (
 
@@ -177,7 +193,7 @@ Viewmor
 </div>
 <div class="mt-4">
 <button 
-onClick={()=>handeleaddToCart(d._id)}
+onClick={()=>handeleaddToCart(d.id)}
 class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
 Addn to Cart
 </button>
@@ -235,7 +251,7 @@ Viewmor
 </div>
 <div class="mt-4">
 <button 
-onClick={()=>{handeleaddToCart(d._id)}}
+onClick={()=>{handeleaddToCart(d.id)}}
 class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
 Addn to Cart
 </button>
