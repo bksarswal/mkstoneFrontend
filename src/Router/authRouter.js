@@ -5,6 +5,8 @@ import Login from "../Screen/Login";
 import Ragister from "../Screen/ragister";
 import ForgotPassword from "../Screen/forgotpass";
 import VerifyOtp from "../Screen/veryfyotp";
+import Home from "../Screen/home";
+import Navbar from "../Layout/Navbar";
 
 
 
@@ -16,9 +18,11 @@ function AuthRouter(){
 
 
         <>
-        
+
+    <Navbar/>
         <Routes>
-            <Route path="/" element={<Login />}/>
+
+            <Route path="/home" element={<Home/>}/>
          
             <Route path="/Login" element={<Login/>}/>
             <Route path="/Ragister" element={<Ragister/>}/>

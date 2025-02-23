@@ -66,8 +66,8 @@ image:"https://5.imimg.com/data5/ANDROID/Default/2022/1/NP/XD/FQ/108570888/produ
 
   function Getprodect(){
 
-axios.get(Base_URL + '/user/getprotects' , p_data).then((res)=>{
-    // console.log(res.data.data);
+axios.post(Base_URL + '/user/getprotects' , p_data).then((res)=>{
+
     setPData(res.data.data);
     if(res.data.message){
         toast.warn(res.data.message)
@@ -159,56 +159,61 @@ Getprodect();
    </div> 
 
 
-   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 bg-gray-100">
+   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 bg-gray-100">
  
   
  {
     filtereProdect.length > 0 ?
    (filtereProdect.map((d,i)=>(
-    <div key={i} class="max-w-sm  bg-white rounded-lg shadow-lg overflow-hidden">
+    <div key={i} className="max-w-sm  bg-white rounded-lg shadow-lg overflow-hidden">
 
-<div className=' items-center '  > <img src={d.image} alt="Product   Image" class="w-full  h-56 "/></div>
-
-
-
-<div class="p-4">
-
-<h2 class="text-xl font-semibold text-gray-800">{d.name}</h2>
+<div className=' items-center '  > <img src={d.image} alt="Product   Image" className="w-full  h-56 "/></div>
 
 
-<p class="text-gray-600 text-sm">Category: <span class="font-medium text-gray-700">{d.catagary}</span></p>
+
+<div className="p-4">
+
+<h2 className="text-xl font-semibold text-gray-800">{d.name}</h2>
 
 
-<div class="flex flex-col items-start mt-2">
-<p class="text-lg font-bold text-green-600 mr-2">Price &#8377; {(d.price)-(d.price*(d.discount/100)).toFixed(2)}</p>
-<span class="text-sm text-gray-500 line-through"> M.R.P &#8377; {(d.price)}</span>
-<span class=" text-xs bg-red-500 text-white px-2 py-1 rounded-full">{d.discount} %OFF</span>
+<p className="text-gray-600 text-sm">Category: <span className="font-medium text-gray-700">{d.catagary}</span></p>
+
+
+<div className="flex flex-col items-start mt-2">
+<p className="text-lg font-bold text-green-600 mr-2">Price &#8377; {(d.price)-(d.price*(d.discount/100)).toFixed(2)}</p>
+<span className="text-sm text-gray-500 line-through"> M.R.P &#8377; {(d.price)}</span>
+<span className=" text-xs bg-red-500 text-white px-2 py-1 rounded-full">{d.discount} %OFF</span>
 </div>
 
-<p class="mt-3 text-gray-700 text-sm">
+<p className="mt-3 text-gray-700 text-sm">
 {d.description}
 </p>
 
-<div class="mt-4">
-<button  onClick={()=>{handelNavigate(d)}} class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
+<div className="mt-4">
+<button  onClick={()=>{handelNavigate(d)}} className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
 Viewmor
 </button>
 </div>
-<div class="mt-4">
+<div className="mt-4">
 <button 
 onClick={()=>handeleaddToCart(d.id)}
-class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
+className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
 Addn to Cart
 </button>
 </div>
-<div class="mt-4">
+<div className="mt-4">
 
 </div>
 </div>
 </div>
 
 
-))):<></>
+))):
+
+<>
+
+
+</>
  }
 
 
@@ -216,50 +221,50 @@ Addn to Cart
 
 </div>
   
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 bg-gray-100">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 bg-gray-100">
  
   
  {
     
    (prodact.map((d,i)=>(
 
-    <div key={i} class="max-w-sm  bg-white rounded-lg shadow-lg overflow-hidden">
+    <div key={i} className="max-w-sm  bg-white rounded-lg shadow-lg overflow-hidden">
 
-<div className=' items-center '  > <img src={d.image} alt="Product   Image" class="w-full  h-56 "/></div>
-
-
-
-<div class="p-4">
-
-<h2 class="text-xl font-semibold text-gray-800">{d.name}</h2>
+<div className=' items-center '  > <img src={d.image} alt="Product   Image" className="w-full  h-56 "/></div>
 
 
-<p class="text-gray-600 text-sm">Category: <span class="font-medium text-gray-700">{d.catagary}</span></p>
+
+<div className="p-4">
+
+<h2 className="text-xl font-semibold text-gray-800">{d.name}</h2>
 
 
-<div class="flex flex-col items-start mt-2">
-<p class="text-lg font-bold text-green-600 mr-2">Price &#8377; {(d.price)-(d.price*(d.discount/100)).toFixed(2)}</p>
-<span class="text-sm text-gray-500 line-through">M.R.P &#8377; {(d.price)}</span>
-<span class=" text-xs bg-red-500 text-white px-2 py-1 rounded-full">{d.discount} %OFF</span>
+<p className="text-gray-600 text-sm">Category: <span className="font-medium text-gray-700">{d.catagary}</span></p>
+
+
+<div className="flex flex-col items-start mt-2">
+<p className="text-lg font-bold text-green-600 mr-2">Price &#8377; {(d.price)-(d.price*(d.discount/100)).toFixed(2)}</p>
+<span className="text-sm text-gray-500 line-through">M.R.P &#8377; {(d.price)}</span>
+<span className=" text-xs bg-red-500 text-white px-2 py-1 rounded-full">{d.discount} %OFF</span>
 </div>
 
-<p class="mt-3 text-gray-700 text-sm">
+<p className="mt-3 text-gray-700 text-sm">
 {d.description}
 </p>
 
-<div class="mt-4">
-<button  onClick={()=>{handelNavigate(d)}} class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
+<div className="mt-4">
+<button  onClick={()=>{handelNavigate(d)}} className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
 Viewmor
 </button>
 </div>
-<div class="mt-4">
+<div className="mt-4">
 <button 
 onClick={()=>{handeleaddToCart(d.id)}}
-class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
+className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
 Addn to Cart
 </button>
 </div>
-<div class="mt-4">
+<div className="mt-4">
 
 </div>
 </div>
