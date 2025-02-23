@@ -8,7 +8,7 @@ import insta from '../Images/sosn/insta2.png';
 import fb from '../Images/sosn/fb.jpg';
 import youtub from '../Images/sosn/youtub.png';
 
-function Navbar() {
+function UserNavbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const toggleSidebar = () => setIsSidebarOpen((prevState) => !prevState);
   const [isLoggedIn, setIsLoggedIn] = useState(true); // Track login status
@@ -32,15 +32,14 @@ function Navbar() {
 
   const Name = [
     { name: 'Home', link: '/home' },
-    { name: 'About', link: '/About' },
-    { name: 'Contact', link: '/Contact' },
-    { name: 'login', link: '/login' },
-    { name: 'Ragister', link: '/Ragister' },
+    // { name: 'About', link: '/About' },
+    // { name: 'Contact', link: '/Contact' },
+    // { name: 'Ragister', link: '/Ragister' },
     
-    // {
-    //   name: isLoggedIn ? 'Logout' : 'Login',
-    //   action: handleLogout, // Attach logout/login handler here
-    // },
+    {
+      name: isLoggedIn ? 'Logout' : 'Login',
+      action: handleLogout, // Attach logout/login handler here
+    },
   ];
 
   return (
@@ -124,7 +123,7 @@ function Navbar() {
         </ul>
       </div>
     </>
-  );
+  )
 }
 
-export default Navbar;
+export default UserNavbar;

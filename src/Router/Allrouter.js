@@ -18,11 +18,11 @@ function AllRouter(){
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/Home" element={<Home/>}/>
-            <Route path="/Contact" element={<ContactUs/>}/>
-            <Route path="/About" element={<AboutUs/>}/>
+            {/* <Route path="/Contact" element={<ContactUs/>}/>
+            <Route path="/About" element={<AboutUs/>}/> */}
             <Route path="/viewmore/:id" element={<Viewmore/>}/>
            
-            <Route path="/*" element={<PageNotFound/>}/>
+            <Route path="/*" element={<Home/>}/>
 
         </Routes>
         
