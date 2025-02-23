@@ -7,6 +7,7 @@ import Navbar from "../Layout/Navbar";
 import AdminNavbar from "../Layout/AdminNavbar";
 import Footer from "../Layout/footer";
 import Whatsapp from "../Screen/watsapp";
+import UserNavbar from "../Layout/UserNavbar";
 
 function CombineRouter() {
   // Extract the `auth` status
@@ -32,7 +33,7 @@ const auth= useSelector((state)=>state.authReducer && state.authReducer.data &&s
           
           <>
 
-          <Navbar/>
+          <UserNavbar/>
           <AllRouter/>
           <Whatsapp/>
           <Footer/>
@@ -44,9 +45,9 @@ const auth= useSelector((state)=>state.authReducer && state.authReducer.data &&s
         </>
       ) : (
         <>
-          {/* <Navbar /> */}
+          <Navbar />
           <AuthRouter />
-          {/* <Footer/> */}
+          <Footer/>
         </>
       )}
     </>
