@@ -105,11 +105,14 @@ axios.get(Base_URL + '/user/getprotects' , p_data).then((res)=>{
     
      }   
 
+
+     
+
 const uid=useSelector((state)=>state.authReducer && state.authReducer.data &&state.authReducer.data._id !=null && state.authReducer.data._id !=="undefind" ? state.authReducer.data._id :"");
 //  console.log(uid)
 
 
-const handeleaddToCart = (pid)=>{
+const handeleaddToCart= (pid)=>{
  let temp = {
 
   u_id:uid,
